@@ -1,0 +1,44 @@
+{
+    "homepage": {
+        "title": "Expert Hire",
+        "subtitle": "Expertise. Commitment. Value.",
+        "companyProfile": "Company Profile",
+        "companyProfileSubtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. A quo voluptate ab laudantium illo quia atque, quibusdam ipsam soluta repellat, dicta perspiciatis animi aut magni velit non sequi. Sequi, debitis?",
+        "viewMore": "View More",
+        "ourServices": "Our Services",
+        "logoDesign": "Logo Design",
+        "logoDesignDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit doloribus consectetur dolorem facere recusandae nulla repellat perferendis",
+        "videoEditing": "Video Editing",
+        "videoEditingDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit doloribus consectetur dolorem facere recusandae nulla repellat perferendis",
+        "websiteDesign": "Website Design",
+        "websiteDesignDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit doloribus consectetur dolorem facere recusandae nulla repellat perferendis",
+        "ourClientRoster": "Our Client Roster",
+        "ourClientRosterSubtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis nihil, fuga quasi voluptatem mollitia deleniti ex dolorem, ipsa ipsam expedita beatae alias aperiam aspernatur quo minus explicabo dignissimos labore enim?",
+        "client1": "Name 1",
+        "client2": "Name 2",
+        "client3": "Name 3",
+        "client4": "Name 4",
+        "letsWorkTogether": "Let's Work together.",
+        "mailingAddress": "Mailing Address",
+        "phoneNumber": "Phone Number",
+        "emailAddress": "Email Address",
+        "ceoQuote": "Accounting is our expertise. We'll take care of it, so you can focus on yours,",
+        "ceoName": "Eric Herzig, CEO"
+    },
+    "web": {
+        "title": "Web Design Form",
+        "questions": [
+            "1. Website Name",
+            "2. What is the primary purpose of the website?/What are your key objectives?",
+            "3. Can you provide any reference websites that you like ? / What specifically do you like about these websites ?",
+            "4. What specific features would you like to include in your website?",
+            "5. Who is your target audience? / Can you describe a typical user who will visit your website?",
+            "6. What is your brand's style and aesthetic? Do you have existing branding or color schemes you want to incorporate?",
+            "7. Do you have any content ready for your website (text, images, videos)? If not, will you need assistance with content creation?",
+            "8. How often do you plan to update the content on your website?",
+            "9. Are there any specific technologies or platforms you'd prefer to use?",
+            "10. Do you have a deadline for the website completion? Is there a specific reason for this date?",
+            "11. What is your budget for this project (USD)?"
+        ]
+    }
+}
