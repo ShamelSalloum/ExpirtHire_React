@@ -1,4 +1,4 @@
-export const BaseUrl = "http://localhost:4000/api/v1";
+export const BaseUrl = "https://expert-hire-api.onrender.com/api/v1";
 export const AdminBaseUrl = "http://localhost:4000/api/v1/admin";
 
 export function extractDate({ date }) {
