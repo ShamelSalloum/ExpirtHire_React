@@ -2,12 +2,14 @@ import { useDispatch, useSelector } from "react-redux";
 import RequestLayout from "../../Layouts/RequestLayout"
 import { FormQuestionCell } from "./Components";
 import { createRequest } from "../../Logic/slices/api_slice/apiActions";
+import { useNavigate } from "react-router-dom";
 
 export default function VideoEditingForm() {
   const token = useSelector(state => state.auth.token);
 
   const videoQuestions = useSelector(state => state.api.videoQuestions);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleSubmitVideoEditing = (event) => {
     event.preventDefault();
@@ -24,7 +26,7 @@ export default function VideoEditingForm() {
     formData['answers'] = answers;
     formData['type'] = "video";
     console.log(token);
-    dispatch(createRequest(token, formData));
+    dispatch(createRequest(token, formData,navigate));
   };
 
   return (

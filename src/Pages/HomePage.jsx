@@ -21,8 +21,6 @@ export default function Homepage() {
   const { t } = useTranslation();
   return (
     <Box bgColor={myGray}>
-    {/* <LanguageSwitcher/> */}
-
       <Flex direction={{ base: "column", md: "column" }} gap={10}>
         <Box
           width="100%"

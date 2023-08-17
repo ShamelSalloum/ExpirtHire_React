@@ -2,7 +2,6 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
   Route,
-  RouterProvider,
 } from "react-router-dom";
 
 import RootLayout from "../src/Layouts/RootLayout";
@@ -29,7 +28,7 @@ import ForgotPassword from "./Pages/ForgotPassword";
 import ResetPassword from "./Pages/ResetPassword";
 
 
-const router = createBrowserRouter(
+export const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
       <Route index element={<Homepage />} />
@@ -64,8 +63,3 @@ const router = createBrowserRouter(
   )
 );
 
-function App() {
-  return <RouterProvider router={router} />;
-}
-
-export default App;

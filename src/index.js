@@ -6,8 +6,9 @@ import { initReactI18next } from "react-i18next";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 import { default as deTranslation, default as enTranslation } from "../src/Logic/Languages/en.json";
-import App from "./App";
+import { router } from "./App";
 import { persistor, store } from "./Logic/store/store";
+import { RouterProvider } from "react-router-dom";
 
 i18n
   .use(initReactI18next)
@@ -28,7 +29,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <PersistGate loading={null} persistor={persistor}>
       <ChakraProvider>
         <React.StrictMode>
-          <App />
+          <RouterProvider router={router} />
         </React.StrictMode>
       </ChakraProvider>
     </PersistGate>

@@ -2,11 +2,13 @@ import { FormQuestionCell } from "./Components";
 import RequestLayout from "../../Layouts/RequestLayout";
 import { useDispatch, useSelector } from "react-redux";
 import { createRequest } from "../../Logic/slices/api_slice/apiActions";
+import { useNavigate } from "react-router-dom";
 
 export default function WebDesignForm() {
   const token = useSelector(state => state.auth.token);
   const webQuestions = useSelector(state => state.api.webQuestions);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const handleSubmitWebRequest = (event) => {
     event.preventDefault();
     const data = new FormData(event.target);
@@ -22,7 +24,7 @@ export default function WebDesignForm() {
     formData['answers'] = answers;
     formData['type'] = "web";
     console.log(token);
-    dispatch(createRequest(token, formData));
+    dispatch(createRequest(token, formData,navigate));
   };
 
   return (

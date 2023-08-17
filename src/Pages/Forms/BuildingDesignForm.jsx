@@ -2,12 +2,14 @@ import RequestLayout from "../../Layouts/RequestLayout";
 import { FormQuestionCell } from "./Components";
 import { useDispatch, useSelector } from "react-redux";
 import { createRequest } from "../../Logic/slices/api_slice/apiActions";
+import { useNavigate } from "react-router-dom";
 
 export default function BuildingDesignForm() {
   const token = useSelector(state => state.auth.token);
 
   const buildingQuestions = useSelector(state => state.api.buildingQuestions);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const handleSubmitBuildingDesign = (event) => {
     event.preventDefault();
     const data = new FormData(event.target);
@@ -23,7 +25,7 @@ export default function BuildingDesignForm() {
     formData['answers'] = answers;
     formData['type'] = "logo";
     console.log(token);
-    dispatch(createRequest(token, formData));
+    dispatch(createRequest(token, formData,navigate));
   };
   
   return (

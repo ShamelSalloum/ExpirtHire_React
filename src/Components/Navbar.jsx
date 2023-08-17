@@ -19,15 +19,15 @@ export default function NavBar() {
       <Flex
         px={{ base: "15px", md: "20px" }}
         alignItems={{ base: "center", md: "center" }}
-        justifyContent={{ base: "space-between", md: "center" }}
+        justifyContent={{ base: "space-evenly", md: "space-evenly" }}
       >
-        <Text fontWeight="bold" fontSize={{ base: 25, md: 35 }} color={white}>
+        <Text fontWeight="bold" fontSize={{ base: 35, md: 35 }} color={white}>
           EH
         </Text>
         <Spacer />
         <Flex
           gap={{ base: 2, md: 6 }}
-          fontSize={{ base: 12, md: 22 }}
+          fontSize={{ base: "sm", md: 25}}
           color={white}
         >
           <Link to="/">
@@ -48,8 +48,8 @@ export default function NavBar() {
                 borderColor={myLightGray}
                 bgColor={white}
                 color="black"
-                borderRadius={{ base: "8px", md: "10px" }}
-                size={{ base: "xs", md: "md" }}
+                borderRadius={{ base: "10px", md: "10px" }}
+                size={{ base: "sm", md: "md" }}
               >
                 login
               </Button>
@@ -61,7 +61,7 @@ export default function NavBar() {
                 color="black"
                 colorScheme="blackAlpha"
                 borderRadius={{ base: "8px", md: "10px" }}
-                size={{ base: "xs", md: "md" }}
+                size={{ base: "sm", md: "md" }}
               >
                 sign-up
               </Button>

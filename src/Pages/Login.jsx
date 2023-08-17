@@ -1,9 +1,10 @@
-import { Box, Button, Flex, Text } from "@chakra-ui/react";
+import { Box, Button, Center, Flex, Text } from "@chakra-ui/react";
 import { Link, useNavigate } from "react-router-dom";
 import { myGray, myLightGray } from "../colors";
 import { useDispatch } from "react-redux";
 import { user_login } from "../Logic/slices/auth_slice/auth_actions";
 import { FormCell } from "./Forms/Components";
+import NavBar from "../Components/Navbar";
 
 
 export default function Login() {
@@ -23,9 +24,11 @@ export default function Login() {
 
   return (
     <form onSubmit={handleLogin}>
+      <NavBar />
       <Box
-        width="full"
-        minHeight="100vh"
+          width="full"
+        minH='103vh'
+        mt={{ base: "0px", md: "-60px" }}
         backgroundImage={"/img/login.jpg"}
         bgColor={myGray}
         backgroundSize="cover"
@@ -38,10 +41,12 @@ export default function Login() {
         flexDirection="column"
         p={{ base: "10px", md: "100px" }}
       >
-        <Box p={4} bg="white" borderRadius={16} justifyContent="center">
+      <Center>
+      <Box p={4} bg="white" borderRadius={16} justifyContent="center">
           <Flex direction={"column"} align="center">
             <Flex
               spacing={8}
+
               w={{ base: "100%", md: "500px" }}
               p={{ base: "10px", md: "30px" }}
               alignItems="stretch"
@@ -96,6 +101,7 @@ export default function Login() {
             </Flex>
           </Flex>
         </Box>
+      </Center>
       </Box>
     </form>
   );

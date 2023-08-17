@@ -52,7 +52,7 @@ const fetchRequests = (token, user_id = null) => async (dispatch) => {
   }
 }
 
-const createRequest = (token, data) => async (dispatch) => {
+const createRequest = (token, data, navigate) => async (dispatch) => {
   try {
     data.country = Country.getCountryByCode(data.country).name;
     const response = await axios.post(`${BaseUrl}/addRequest`, {
@@ -71,6 +71,7 @@ const createRequest = (token, data) => async (dispatch) => {
     });
     if (response.status === 200) {
       toast.success("Your Service Request Submitted Successfully");
+      navigate('/profile');
     } else {
       toast.error(response.data.message);
     }

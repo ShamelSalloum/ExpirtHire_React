@@ -2,13 +2,14 @@ import {  FormQuestionCell } from "./Components";
 import RequestLayout from "../../Layouts/RequestLayout";
 import { useDispatch, useSelector } from "react-redux";
 import { createRequest } from "../../Logic/slices/api_slice/apiActions";
+import { useNavigate } from "react-router-dom";
 
 export default function LogoDesignForm() {
   const token = useSelector(state => state.auth.token);
 
   const logoQuestions = useSelector(state => state.api.logoQuestions);
   const dispatch = useDispatch();
-
+  const navigate = useNavigate();
   const handleSubmitLogoDesign = (event) => {
     event.preventDefault();
     const data = new FormData(event.target);
@@ -24,7 +25,7 @@ export default function LogoDesignForm() {
     formData['answers'] = answers;
     formData['type'] = "logo";
     console.log(token);
-    dispatch(createRequest(token, formData));
+    dispatch(createRequest(token, formData ,navigate));
   };
 
   return (
